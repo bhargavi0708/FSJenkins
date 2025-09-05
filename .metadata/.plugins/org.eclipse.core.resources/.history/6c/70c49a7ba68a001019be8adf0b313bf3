@@ -30,18 +30,6 @@ public class DataController {
         List<Data> students = dataService.getAllData();
         return new ResponseEntity<>(students, HttpStatus.OK);
     }
-    
- // ✅ Get data by ID
-    @GetMapping("/get/{id}")
-    public ResponseEntity<Data> getDataById(@PathVariable int id) {
-        Data data = dataService.getDataById(id);
-        if (data != null) {
-            return new ResponseEntity<>(data, HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-    }
-
 
     // ✅ Delete Data
     @DeleteMapping("/delete/{id}")
