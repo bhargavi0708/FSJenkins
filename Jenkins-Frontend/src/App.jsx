@@ -1,4 +1,4 @@
-import StudentManager from "./components/Data"
+import Data from "./components/Data"
 
 function App() {
 
